@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <?php require'view/importsHead.php' ?>
+
+</head>
+<body>
+<?php require'view/header.php' ?>
+
+<main class="container">
+    <h1>Enlaces</h1>
+    <div class="row justify-content-md-center">
+            <?php
+                include_once 'models/class/enlaces.php';
+                
+                foreach($this->enlaces as $row){
+                    $enlace = new \Models\Class\Enlaces();
+                    $enlace = $row;
+            ?>
+        <div class="col g-3"">
+            <div class="card" style="width: 19rem;">
+                <div class="card-header bg-transparent border-success">
+                    <h5 class="card-title"> <?php echo $enlace->nombre; ?> </h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?php echo $enlace->ubicasion; ?></h6>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"> <?php echo $enlace->link; ?></p>
+                </div>
+                <div class="card-footer bg-transparent border-success">
+                    <a href="http://localhost/MarcadorPages/Enlaces/elimiar/<?php echo $enlace->uuid ?>" class="card-link" >Eliminar</a>
+                    <a href="http://localhost/MarcadorPages/Enlaces/Modificar/<?php echo $enlace->uuid ?>" class="card-link">Editar</a>
+                    <a href="<?php echo $enlace->link; ?>" target="_blank" class="card-link">Ir</a>
+                </div>
+            </div>
+        </div>
+
+            <?php }?>
+    </div>
+</main>
+    <?php require'view/importsFooter.php' ?>
+</body>
+</html>

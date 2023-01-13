@@ -1,0 +1,5 @@
+BOOKDB.session.sql
+vendor
+.vscode
+config
+logs
