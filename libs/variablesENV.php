@@ -1,9 +1,9 @@
 <?php
 require 'vendor/autoload.php';
 
+
 $dotenv = Dotenv\Dotenv::createImmutable('./');
 $dotenv->load();
-// echo $_ENV['APP_NAME'].PHP_EOL;
 
 define('APP_NAME' , $_ENV['APP_NAME'].PHP_EOL);
 
