@@ -68,8 +68,7 @@ class Ubicasion extends \Libs\Controller{
         $estado = $this->model->deletedUbucasion($param[0]);
 
         if($estado){
-            $mensaje = "Ubicasión eliminada exitosamente";
-            $this->render($mensaje);
+            $this->redirect('http://localhost/MarcadorPages/Ubicasion');
         }else{
             $mensaje = "La ubicasión contiene enlaces";
             $this->render($mensaje);

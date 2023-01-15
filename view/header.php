@@ -1,4 +1,4 @@
-<nav  class="navbar navbar-expand-lg bg-light">
+<nav  class="secondaryColor navbar navbar-expand-lg ">
     <div class="container-fluid">
         <!-- <a class="navbar-brand" href="http://localhost/MarcadorPages/">Navbar</a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Enlaces
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
+                    <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="http://localhost/MarcadorPages/Enlaces">Lista</a></li>
                         <li><a class="dropdown-item" href="http://localhost/MarcadorPages/Enlaces/Nuevo">Nuevo enlace</a></li>
                     </ul>
@@ -21,7 +21,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Ubicsaion
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
+                    <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="http://localhost/MarcadorPages/Ubicasion">Lista</a></li>
                         <li><a class="dropdown-item" href="http://localhost/MarcadorPages/Ubicasion/Nueva">Nuevo enlace</a></li>
                     </ul>

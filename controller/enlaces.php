@@ -36,9 +36,7 @@ class Enlaces extends \Libs\Controller{
         $estado = $this->model->deleteLink($param[0]);
 
         if($estado){
-            $mensaje = "Enlace elimnado exitosamente";
-            $this->view->mensaje = $mensaje;
-            $this->render();
+            $this->redirect('http://localhost/MarcadorPages/Enlaces');
         }else{
             $mensaje = "no se a eliminado el enlace";
             $this->view->mensaje = $mensaje;

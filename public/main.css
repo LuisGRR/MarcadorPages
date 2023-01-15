@@ -1,13 +1,44 @@
-.customSuggestionsList > div {
-  max-height: 300px;
-  min-height: 50px;
-  border: 2px solid pink;
-  overflow: auto;
+:root {
+  --primary-color: #cee5d0;
+  --secondaryColor: #f3f0d7;
+  --textColor: #d8b384;
+  --detailColor: #5e454b;
 }
 
-.customSuggestionsList .empty {
-  color: #999;
-  font-size: 20px;
-  text-align: center;
-  padding: 1em;
+.primaryColor {
+  background-color: var(--primaryColor) !important;
+}
+.secondaryColor {
+  background-color: var(--secondaryColor);
+}
+
+.textColor {
+  color: var(--textColor);
+}
+
+.detailColor {
+  color: var(--detailColor) !important;
+}
+
+.borderColor {
+  border-color: var(--primary-color) !important;
+}
+
+.btnColor {
+  background-color: var(--secondaryColor);
+}
+
+.btnColor:hover {
+  background-color: var(--textColor);
+}
+
+.enlace {
+  color: var(--textColor);
+}
+.enlace:hover {
+  color: var(--detailColor);
+}
+
+.heigError {
+  height: 60vh;
 }
