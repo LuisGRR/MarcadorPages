@@ -56,7 +56,7 @@ class App{
                 $controller->render();   
             }
         }else{
-            //encaso de que no encuantre el archivo del controlador mostrara un apagina de error 
+            //encaso de que no encuantre el archivo del controlador, mostrara un apagina de error 
             $controller = new \Controller\Errors();
         }
     }

@@ -11,12 +11,15 @@ namespace Libs;
 */
 class Model {
 
+    private $conection;
+
     /**
     * Crea el objeto de la conexion a la BD
     *
     */
     function __construct() {
-        $this->db = new \Database\Database();
+        // $this->db = new \Database\Database();
+        $this->conection = \Database\Database::getInstance();
     }
 
     /**
@@ -26,7 +29,7 @@ class Model {
     * @return object de los datos cosultados
     */
     function query($query){
-         return $this->db->getConexion()->query($query);
+         return $this->conection->getConexion()->query($query);
     }
 
     /**
@@ -36,7 +39,7 @@ class Model {
     * @return object de los datos cosultados
     */
     function prepare($query){
-        return $this->db->getConexion()->prepare($query);
+        return $this->conection->getConexion()->prepare($query);
     }
 
 }

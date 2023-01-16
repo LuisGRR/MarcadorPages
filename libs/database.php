@@ -46,9 +46,11 @@ class Database{
     */
     private $port;
 
+    private static $instance = null;
+    private $conexion;
 
     /**
-    * Asigna los valores de las variables de entorno
+    * Asigna los valores de las variables de entorno y ejecuta la función para la conexion a la BD
     */
     public function __construct(){
         $this->host = DB_HOST;
@@ -57,6 +59,8 @@ class Database{
         $this->database = DB_DATABASE;
         $this->connection = DB_CONECTION;
         $this->port = DB_PORT;
+
+        $this->conexion = $this->getConexion();
     }
 
     /**
@@ -80,6 +84,17 @@ class Database{
             $this->errorsLogs($e,'ConectD');
             die("Error en el servidor");
         }
+    }
+
+    /**
+    * Crea solo una instacia de la clase para la conexión
+    * @return instace
+    */
+    public static function getInstance(){
+        if (self::$instance == null){
+            self::$instance = new Database();
+        }
+        return self::$instance;
     }
 
 }
