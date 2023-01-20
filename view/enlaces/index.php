@@ -20,7 +20,7 @@
                 include_once 'models/class/enlaces.php';
                 
                 foreach($this->enlaces as $row){
-                    $enlace = new \Models\Class\Enlaces();
+                    $enlace = new \Models\ClassModel\Enlaces();
                     $enlace = $row;
             ?>
         <div class="col"">

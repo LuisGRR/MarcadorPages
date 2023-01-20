@@ -4,6 +4,14 @@ namespace Controller;
 
 include 'models/ubicasionmodel.php';
 
+/**
+* Clase para Renderizar la vista
+*
+* Esta clase proporciona funciones para el manejo de la vista, el modelo y las peticines
+*
+* @author Luis Gerardo Rivera Rivera
+* @version 0.1
+*/
 class Enlaces extends \Libs\Controller{
 
     function __construct() {

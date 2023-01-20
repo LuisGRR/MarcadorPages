@@ -8,6 +8,9 @@ namespace Models;
 
 class MainModel extends \Libs\Model{
 
+    use Logger;
+
+
     public function __construct(){
         parent::__construct(); 
     }
@@ -18,7 +21,7 @@ class MainModel extends \Libs\Model{
         try{
             $query = $this->query('SELECT "Enlaces"."UUID","Enlaces"."Orden","Enlaces"."Nombre" AS "NombreEnlace","Enlaces"."Etiqueta","Enlaces"."Link","Ubicasion"."Nombre" AS "NombreUbicasion" FROM "Enlaces" INNER JOIN "Ubicasion" ON "Enlaces"."Ubicasion" = "Ubicasion"."ID"');
              while($row = $query->fetch()){
-                $enlaces = new \Models\Class\Enlaces();
+                $enlaces = new \Models\ClassModel\Enlaces();
                 $enlaces->uuid = $row['UUID'];
                 $enlaces->orden =  $row['Orden'];
                 $enlaces->nombre = $row['NombreEnlace'];

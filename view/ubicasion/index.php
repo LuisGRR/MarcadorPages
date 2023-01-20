@@ -20,7 +20,7 @@
                 include_once 'models/class/ubicasion.php';
                 
                 foreach($this->enlaces as $row){
-                    $ubicasion = new \Models\Class\Ubicasion();
+                    $ubicasion = new \Models\ClassModel\Ubicasion();
                     $ubicasion = $row;
             ?>
             <div class="col"">

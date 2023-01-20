@@ -18,7 +18,7 @@
         <div class="card p-5 w-50 shadow rounded">
             <form  class="row align-items-start g-3"  action="http://localhost/MarcadorPages/Enlaces/updateLink" method="post">
                 <?php include_once 'models/class/enlaces.php';
-                    $enlace = new \Models\Class\Enlaces();
+                    $enlace = new \Models\ClassModel\Enlaces();
                     $enlace = $this->info;
                 ?>
                 <div class="col-12">
@@ -35,7 +35,7 @@
                         include_once 'models/class/ubicasion.php';
                         $selectd = "";
                         foreach($this->ubicasion as $row){
-                        $ubicasion = new \Models\Class\Ubicasion();
+                        $ubicasion = new \Models\ClassModel\Ubicasion();
                         $ubicasion = $row;
                         if($ubicasion->id == $enlace->ubicasion){
                             $selectd = "selected";

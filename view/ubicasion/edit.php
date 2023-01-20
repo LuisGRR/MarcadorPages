@@ -18,7 +18,7 @@
         <div class="card p-5 w-50 shadow rounded">
             <form class="row align-items-start g-3" action="http://localhost/MarcadorPages/Ubicasion/updateUbicasion" method="POST">
                 <?php include_once 'models/class/ubicasion.php';
-                    $ubicasion = new \Models\Class\Ubicasion();
+                    $ubicasion = new \Models\ClassModel\Ubicasion();
                     $ubicasion = $this->info;
                 ?>
                 <div class="col-12">

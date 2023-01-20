@@ -1,6 +1,6 @@
 <?php 
 
-namespace Models\Class;
+namespace Models\ClassModel;
 
 
 class Enlaces {

@@ -17,10 +17,10 @@ class UbicasionModel extends \Libs\Model {
     public function getAll() {
         $items = [];
         try{
-            $ubicasion = new \Models\Class\Ubicasion();
+            $ubicasion = new \Models\ClassModel\Ubicasion();
             $query = $this->query('SELECT * FROM public."Ubicasion"');
             while($row = $query->fetch()){
-                $ubicasion = new \Models\Class\Ubicasion();
+                $ubicasion = new \Models\ClassModel\Ubicasion();
                 $ubicasion->id = $row['ID'];
                 $ubicasion->nombre = $row['Nombre'];
                 array_push($items,$ubicasion);
@@ -34,7 +34,7 @@ class UbicasionModel extends \Libs\Model {
     }
 
     public function getUbicasion($id){
-        $ubicasion = new \Models\Class\Ubicasion();
+        $ubicasion = new \Models\ClassModel\Ubicasion();
         try{
             $query = $this->prepare('SELECT * FROM public."Ubicasion" WHERE "ID" = :id');
             $query->execute([

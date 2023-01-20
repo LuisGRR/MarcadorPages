@@ -12,16 +12,15 @@ namespace Libs;
 class Model {
 
     private $conection;
-
     /**
-    * Crea el objeto de la conexion a la BD
+    * Asigan el objeto de la clase Database a la variable
     *
     */
     function __construct() {
         // $this->db = new \Database\Database();
         $this->conection = \Database\Database::getInstance();
     }
-
+ 
     /**
     * Realiza la cosulta por medio de Query a la BD
     *

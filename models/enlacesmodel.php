@@ -19,7 +19,7 @@ class EnlacesModel extends \Libs\Model{
         try{
             $query = $this->query('SELECT "Enlaces"."UUID","Enlaces"."Orden","Enlaces"."Nombre" AS "NombreEnlace","Enlaces"."Etiqueta","Enlaces"."Link","Ubicasion"."Nombre" AS "NombreUbicasion" FROM "Enlaces" INNER JOIN "Ubicasion" ON "Enlaces"."Ubicasion" = "Ubicasion"."ID"');
              while($row = $query->fetch()){
-                $enlaces = new \Models\Class\Enlaces();
+                $enlaces = new \Models\ClassModel\Enlaces();
                 $enlaces->uuid = $row['UUID'];
                 $enlaces->orden =  $row['Orden'];
                 $enlaces->nombre = $row['NombreEnlace'];
@@ -83,7 +83,7 @@ class EnlacesModel extends \Libs\Model{
     }
     
     public function getLink($uuid){
-        $enlaces = new \Models\Class\Enlaces();
+        $enlaces = new \Models\ClassModel\Enlaces();
         try{
             $query = $this->prepare('SELECT * FROM public."Enlaces" WHERE "UUID" = :uuid');
             $query->execute([

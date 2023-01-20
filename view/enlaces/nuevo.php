@@ -31,7 +31,7 @@
                 include_once 'models/class/ubicasion.php';
                 
                 foreach($this->ubicasion as $row){
-                    $ubicasion = new \Models\Class\Ubicasion();
+                    $ubicasion = new \Models\ClassModel\Ubicasion();
                     $ubicasion = $row;
 
                     echo '<option value="'.$ubicasion->id.'">'.$ubicasion->nombre.'</option>';
